@@ -1,0 +1,89 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    overflow-x: hidden;
+}
+body{
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    border-bottom: 1px solid black;
+}
+.logo {
+    width: clamp(40px, 6vw, 72px);
+    height: auto;
+}
+.navIzquierda{
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    gap: 0.2rem;
+    margin-left: 16px;
+}
+.icono {
+  right: 0.5rem; /* reduce el margen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--main-icon-menu);
+  height: 55px;
+  width: 45px; /* un poco más pequeño */
+  border-radius: 30% 0 0 30%;
+  z-index: 10000;
+  box-sizing: border-box; /* importante */
+}
+
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 4px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.change .bar1 {
+  transform: rotate(-45deg) translate(-12px, 11px);
+}
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  transform: rotate(45deg) translate(-12px, -12px);
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.izquierda{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    border: 1px solid black;
+    width: fit-content;
+}
+
+.centro{
+    display: flex;
+    flex-direction: row;
+    margin-left: 16px;
+    margin-right: 16px;
+    border: 1px solid black;
+    width: fit-content;
+}
