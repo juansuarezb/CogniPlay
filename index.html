@@ -20,22 +20,33 @@
     <meta name="description"
         content="Plataforma de juegos educativos diseñada para reforzar la atención y la memoria en personas con TDAH.">
     <link rel="stylesheet" href="estilos/styles.css">
+    <script src="../js/script.js" defer></script>
 </head>
-
 <body>
+    <!--Header es una etiqueta semántica
+    y define la cabecera principal de la página.
+    Además, mejora el SEO y organiza mejor el
+    contenido para los motores de búsqueda-->
     <header>
-        <div class="navIzquierda">
-            <picture class="logoPrincipal">
-                <source srcset="assets/logo.webp" type="image/webp">
-                <img src="assets/logo.png" alt="Logo de CogniPlay" class="logo">
-            </picture>
-            <h1>CogniPlay</h1>
-        </div>
-        <div class="menu">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
+        <!--La etiqueta nav representa
+        la barra de navegación del sitio web-->
+        <nav>
+            <!--La clase nav-container me ayuda
+            a ordenar y posicionar los elementos
+            del menu-->
+            <div class="nav-container">
+                <!--Logo del sitio web-->
+                <a href="" class="logo">CogniPlay</a>
+                <!--Botón de menú hamburguesa -->
+                <button class="menu-btn" id="menu-btn">&#9776;</button>
+                <!--Lista de navegación -->
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="../index.html">Juegos</a></li>
+                    <li><a href="../pages/sopaLetrasConfiguracionPartida.html">Acerca de</a></li>
+                    <li><a href="../pages/juegoMemoriaConfiguracion.html">Support</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <main>
         <div class="cartaJuegoMemoria">
