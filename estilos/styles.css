@@ -28,12 +28,11 @@ header{
 .navIzquierda{
     display: flex;
     align-items: center;
-    margin-top: 16px;
     gap: 0.2rem;
     margin-left: 16px;
 }
 .icono {
-  right: 0.5rem; /* reduce el margen */
+  margin-right: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,6 +61,26 @@ header{
 }
 .change .bar3 {
   transform: rotate(45deg) translate(-12px, -12px);
+}
+
+main{
+    position: relative;
+    
+}
+main .musica {
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    transform: translate(-50%, -25%);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 50%;
 }
 
 footer{
