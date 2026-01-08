@@ -52,7 +52,6 @@ header{
   transform: rotate(-45deg) translate(6px, -8px);
 }
 
-
 main{
     position: relative;
     display: flex;
@@ -77,7 +76,36 @@ main .musica {
     border-radius: 50%;
 }
 .cartaJuegoSopaLetras, .cartaJuegoMemoria {
-position: static;
+position: relative;
+width: 280px;
+border-radius: 16px;
+overflow: hidden;
+}
+.cartaJuego img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.overlay-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+
+    background-color: rgba(255, 51, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+.overlay-play i {
+    color: white;
+    font-size: 24px;
 }
 .cartaJuegoMemoria{
     margin-top: 2rem;
