@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../estilos/styles.css">
+    <script src="../../js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <!--La etiqueta nav representa
+        la barra de navegación del sitio web-->
+        <nav>
+            <!--La clase nav-container me ayuda
+            a ordenar y posicionar los elementos
+            del menu-->
+            <div class="nav-container">
+                <!--Logo del sitio web-->
+                <a href="" class="logo">CogniPlay</a>
+                <!--Botón de menú hamburguesa -->
+                <button class="menu-btn" id="menu-btn">&#9776;</button>
+                <!--Lista de navegación -->
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="../../index.html">Juegos</a></li>
+                    <li><a href="../pages/sopaLetrasConfiguracionPartida.html">Acerca de</a></li>
+                    <li><a href="../pages/juegoMemoriaConfiguracion.html">Support</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<main class="pre-partida">
+
+    <!-- Enlace a ranking -->
+    <section class="ranking-link">
+        <a href="ranking.html">Ver puntajes</a>
+    </section>
+
+    <!-- Contenido principal -->
+    <section class="pre-partida-card">
+
+        <!-- Imagen / ilustración del juego -->
+        <div class="imagen-juego">
+            <!-- Aquí puedes reemplazar por <img> -->
+            <div class="placeholder-imagen"></div>
+        </div>
+
+        <!-- Formulario de ingreso de nombre -->
+        <form id="formJugador" class="form-jugador">
+
+            <label for="nombreJugador">Nombre</label>
+
+            <input 
+                type="text"
+                id="nombreJugador"
+                name="nombreJugador"
+                placeholder="Ingrese el nombre"
+                maxlength="20"
+                required
+            >
+            <br><br>
+            <button type="submit" class="btn-siguiente" onclick="window.location.href='../../pages/sopaLetras/sopaLetrasConfiguracionPartida.html'">
+                Configurar la partida
+            </button>
+            <button type="button" class="btn-cancelar" onclick="window.location.href='../../index.html'">
+                Cancelar
+
+        </form>
+
+    </section>
+</main>
+</body>
+
+</html>
