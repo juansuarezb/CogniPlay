@@ -1,13 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
+    <!-- ================================================= -->
+    <!-- HEAD BASE - COGNIPLAY -->
+    <!-- SEO + ACCESIBILIDAD + SOCIAL -->
+    <!-- ================================================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- ============================= -->
+    <!-- SEO -->
+    <!-- ============================= -->
+    <meta name="description" content="{{PAGE_DESCRIPTION}}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{PAGE_URL}}">
+    <meta name="author" content="Anderson Cango, Dylan Granizo, Juan Suárez, Álvaro Zumbana">
+    <!-- ============================= -->
+    <!-- ACCESIBILIDAD -->
+    <!-- ============================= -->
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#4A90E2">
+    <!-- ============================= -->
+    <!-- OPEN GRAPH -->
+    <!-- ============================= -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{PAGE_TITLE}}">
+    <meta property="og:description" content="{{PAGE_DESCRIPTION}}">
+    <meta property="og:url" content="{{PAGE_URL}}">
+    <meta property="og:image" content="{{OG_IMAGE}}">
+    <!-- ============================= -->
+    <!-- TWITTER -->
+    <!-- ============================= -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{PAGE_TITLE}}">
+    <meta name="twitter:description" content="{{PAGE_DESCRIPTION}}">
+    <meta name="twitter:image" content="{{OG_IMAGE}}">
+    <!-- ============================= -->
+    <!-- ESTILOS -->
+    <!-- ============================= -->
     <link rel="stylesheet" href="../../estilos/styles.css">
+    <!-- ============================= -->
+    <!-- ICONOS -->
+    <!-- ============================= -->
+    <script src="https://kit.fontawesome.com/e027a9bad0.js" crossorigin="anonymous"></script>
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
     <script src="../../js/script.js" defer></script>
 </head>
+
 <body>
     <header>
         <!--La etiqueta nav representa
@@ -30,46 +71,41 @@
             </div>
         </nav>
     </header>
-<main class="pre-partida">
+    <main class="pre-partida">
 
-    <!-- Enlace a ranking -->
-    <section class="ranking-link">
-        <a href="ranking.html">Ver puntajes</a>
-    </section>
+        <!-- Enlace a ranking -->
+        <section class="ranking-link">
+            <a href="ranking.html">Ver puntajes</a>
+        </section>
 
-    <!-- Contenido principal -->
-    <section class="pre-partida-card">
+        <!-- Contenido principal -->
+        <section class="pre-partida-card">
 
-        <!-- Imagen / ilustración del juego -->
-        <div class="imagen-juego">
-            <!-- Aquí puedes reemplazar por <img> -->
-            <div class="placeholder-imagen"></div>
-        </div>
+            <!-- Imagen / ilustración del juego -->
+            <div class="imagen-juego">
+                <!-- Aquí puedes reemplazar por <img> -->
+                <div class="placeholder-imagen"></div>
+            </div>
 
-        <!-- Formulario de ingreso de nombre -->
-        <form id="formJugador" class="form-jugador">
+            <!-- Formulario de ingreso de nombre -->
+            <form id="formJugador" class="form-jugador">
 
-            <label for="nombreJugador">Nombre</label>
+                <label for="nombreJugador">Nombre</label>
 
-            <input 
-                type="text"
-                id="nombreJugador"
-                name="nombreJugador"
-                placeholder="Ingrese el nombre"
-                maxlength="20"
-                required
-            >
-            <br><br>
-            <button type="submit" class="btn-siguiente" onclick="window.location.href='../../pages/sopaLetras/sopaLetrasConfiguracionPartida.html'">
-                Configurar la partida
-            </button>
-            <button type="button" class="btn-cancelar" onclick="window.location.href='../../index.html'">
-                Cancelar
+                <input type="text" id="nombreJugador" name="nombreJugador" placeholder="Ingrese el nombre"
+                    maxlength="20" required>
+                <br><br>
+                <button type="submit" class="btn-siguiente"
+                    onclick="window.location.href='../../pages/sopaLetras/sopaLetrasConfiguracionPartida.html'">
+                    Configurar la partida
+                </button>
+                <button type="button" class="btn-cancelar" onclick="window.location.href='../../index.html'">
+                    Cancelar
 
-        </form>
+            </form>
 
-    </section>
-</main>
+        </section>
+    </main>
 </body>
 
 </html>
