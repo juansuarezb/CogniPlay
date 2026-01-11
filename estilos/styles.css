@@ -164,28 +164,224 @@ main .musica {
     object-fit: contain;
 }
 
+/* =========================================
+   FOOTER
+   ========================================= */
+
 footer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 16px;
+    justify-content: space-around; 
     align-items: center;
     border-top: 1px solid black;
+    padding: 2rem 5%;
+    width: 100%;
+    box-sizing: border-box; 
+    background-color: #000000; 
+    flex-wrap: wrap; 
 }
 
+/* Estilos de la parte izquierda (Iconos) */
 .izquierda {
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    gap: 20px; 
     width: fit-content;
+    align-items: center;
 }
 
+.izquierda a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.izquierda figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.izquierda i {
+    font-size: 1.5rem; 
+    margin-bottom: 5px;
+}
+
+/* Estilos de la parte derecha (Datos de contacto) */
 .derecha {
     display: flex;
     flex-direction: column;
-    margin-left: 16px;
-    margin-right: 16px;
+    gap: 15px;
     width: fit-content;
+    text-align: left; 
+    max-width: 100%;
+}
+
+.derecha div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.derecha i {
+    font-size: 1.2rem;
+    color: white; 
+    flex-shrink: 0; /* Evita que el icono se aplaste */
+    width: 20px;
+    text-align: center;
+}
+
+.derecha a, .derecha span {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    word-break: break-word;
+}
+/* =========================================
+   TUTORIAL ONBOARDING (MODAL)
+   ========================================= */
+.tutorial-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(5px); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.tutorial-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.tutorial-modal {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid black;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.tutorial-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: black;
+    font-weight: bold;
+}
+
+.tutorial-desc {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    min-height: 80px;
+}
+
+.tutorial-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #888;
+    line-height: 1;
+}
+
+.tutorial-close:hover {
+    color: black;
+}
+
+/* Indicadores */
+.step-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 2rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: black;
+    transform: scale(1.2);
+}
+/* Botonera Tutorial */
+.tutorial-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #555;
+    border: 1px solid transparent;
+}
+
+.btn-secondary:hover {
+    color: black;
+    background-color: #f0f0f0;
+}
+
+.btn-secondary:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
 }
 
 @media (max-width: 768px) {
@@ -234,5 +430,53 @@ footer {
 
     .nav-links li:nth-child(3) {
         transition-delay: 0.3s;
+    }
+
+    /* FOOTER MÓVIL */
+    footer {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .izquierda {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .derecha {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .derecha div {
+        justify-content: center;
+    }
+
+    /* TUTORIAL MÓVIL */
+    .tutorial-modal {
+        padding: 1.5rem;
+    }
+
+    .tutorial-title {
+        font-size: 1.5rem;
+    }
+
+    .tutorial-actions {
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+
+    .nav-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #btn-skip {
+        width: 100%;
+        border: 1px solid #ddd;
     }
 }

@@ -162,6 +162,27 @@
             </div>
         </div>
     </footer>
+    <div id="tutorial-overlay" class="tutorial-overlay hidden">
+        <div class="tutorial-modal" role="dialog" aria-modal="true" aria-labelledby="tutorial-title">
+            <button class="tutorial-close" id="btn-close-tutorial" aria-label="Cerrar tutorial">&times;</button>
+
+            <div class="tutorial-content">
+                <h2 id="tutorial-title" class="tutorial-title">Título del Paso</h2>
+                <p id="tutorial-desc" class="tutorial-desc">Descripción del paso...</p>
+
+                <div class="step-indicators" id="step-indicators">
+                </div>
+            </div>
+
+            <div class="tutorial-actions">
+                <button id="btn-skip" class="btn-secondary">Saltar</button>
+                <div class="nav-buttons">
+                    <button id="btn-prev" class="btn-secondary" disabled>Anterior</button>
+                    <button id="btn-next" class="btn-primary">Siguiente</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
