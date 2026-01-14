@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ================================================= -->
+    <!-- HEAD BASE - COGNIPLAY -->
+    <!-- ================================================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Puntajes - CogniPlay</title>
+
+    <!-- ============================= -->
+    <!-- SEO -->
+    <!-- ============================= -->
+    <meta name="description" content="Visualización de puntajes del juego Sopa de Letras">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Anderson Cango, Dylan Granizo, Juan Suárez, Álvaro Zumbana">
+
+    <!-- ============================= -->
+    <!-- ACCESIBILIDAD -->
+    <!-- ============================= -->
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#4A90E2">
+
+    <!-- ============================= -->
+    <!-- ESTILOS -->
+    <!-- ============================= -->
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../estilos/styles.css">
+
+    <!-- ============================= -->
+    <!-- ICONOS -->
+    <!-- ============================= -->
+    <script src="https://kit.fontawesome.com/e027a9bad0.js" crossorigin="anonymous"></script>
+
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
+    <script src="../../js/script.js" defer></script>
+</head>
+
+<body>
+<header>
+    <nav>
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">CogniPlay</a>
+            <button class="menu-btn" id="menu-btn">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../../index.html">Juegos</a></li>
+                <li><a href="prePartida.html">Jugar</a></li>
+                <li><a href="verPuntajes.html">Puntajes</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main class="pre-partida">
+
+    <!-- Enlace de retorno -->
+    <section class="ranking-link">
+        <a href="prePartida.html">Volver</a>
+    </section>
+
+    <!-- Card principal (misma estructura visual) -->
+    <section class="pre-partida-card">
+
+        <h2 class="tituloJuego">Puntajes - Sopa de Letras</h2>
+
+        <table class="tabla-puntajes">
+            <thead>
+                <tr>
+                    <th scope="col">Jugador</th>
+                    <th scope="col">Puntaje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Datos estáticos de ejemplo -->
+                <tr>
+                    <td>Ana Pérez</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td>Carlos Gómez</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>María López</td>
+                    <td>95</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+</main>
+
+</body>
+</html>
