@@ -120,9 +120,27 @@
                 </div>
             </div>
         </div>
-        <div class="musica">
+        <button class="musica" commandfor="music-dialog" command="show-modal">
             <i class="fa-solid fa-music"></i>
-        </div>
+        </button>
+        <dialog id="music-dialog" class="music-dialog">
+            <form method="dialog">
+                <h3>Configuración de Música de Fondo</h3>
+                <div class="music-options">
+                    <label>
+                        <input type="radio" name="music" value="on" checked>
+                        Activar Música
+                    </label>
+                    <label>
+                        <input type="radio" name="music" value="off">
+                        Desactivar Música
+                    </label>
+                </div>
+                <div class="dialog-actions">
+                    <button type="submit">Cerrar</button>
+                </div>
+            </form>
+        </dialog>
     </main>
     <footer>
         <div class="izquierda">
