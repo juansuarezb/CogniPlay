@@ -88,6 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
         updateModal();
     } else {
         overlay.classList.add('hidden');
+        // Si ya vio el tutorial, reproducir música automáticamente
+        playBackgroundMusic();
     }
 
     // --- FUNCIONES ---
@@ -126,9 +128,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function playBackgroundMusic() {
+        const music = document.getElementById("background-music");
+        if (music) {
+            music.play().catch(error => {
+                console.log("La reproducción automática fue bloqueada por el navegador:", error);
+            });
+        }
+    }
+
     function closeTutorial() {
         overlay.classList.add('hidden');
         localStorage.setItem('cogniplay_tutorial_v1', 'true');
+        // Reproducir música automáticamente al terminar tutorial
+        playBackgroundMusic();
     }
 
     // --- EVENTOS ---

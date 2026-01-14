@@ -4,7 +4,7 @@ body {
 }
 
 nav {
-    background-color: black;
+    background-color: var(--color-primary);
     padding: 1rem 2rem;
 }
 
@@ -39,6 +39,7 @@ main {
     gap: 24px;
     align-items: center;
     justify-content: center;
+    background-color: var(--color-gray-300);
 }
 
 footer {
@@ -50,7 +51,7 @@ footer {
     padding: 2rem 5%;
     width: 100%;
     box-sizing: border-box; 
-    background-color: #000000; 
+    background-color: var(--color-primary); 
     flex-wrap: wrap; 
 }
 

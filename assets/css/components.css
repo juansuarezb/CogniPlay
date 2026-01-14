@@ -318,3 +318,18 @@ main .musica {
     font-weight: bold;
     background-color: #027000;
 }
+
+.music-dialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 1100;
+    width: 90%;
+    max-width: 400px;
+}
