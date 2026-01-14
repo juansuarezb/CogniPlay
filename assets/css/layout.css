@@ -40,7 +40,7 @@ main {
     gap: 24px;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-gray-300);
+    background-color: var(--color-white);
 }
 
 footer {
