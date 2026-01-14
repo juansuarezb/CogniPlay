@@ -1,37 +1,13 @@
-body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-}
-
-nav {
-    background-color: black;
-    padding: 1rem 2rem;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
+/* components.css */
 .logo {
-    color: white;
+    color: var(--color-white);
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
 }
 
-.nav-links {
-    display: flex;
-    gap: 1.5rem;
-    list-style-type: none;
-    transition: all 0.3s ease;
-}
-
 .nav-links a {
-    color: white;
+    color: var(--color-white);
     text-decoration: none;
     font-size: 1rem;
     transition: all 0.2s;
@@ -39,25 +15,8 @@ nav {
 
 .nav-links a:hover {
     opacity: 0.8;
+    color: var(--color-primary);
     transform: translate(-2px);
-}
-
-.menu-btn {
-    background: none;
-    border: none;
-    color: #ffff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
-
-main {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    align-items: center;
-    justify-content: center;
 }
 
 main .musica {
@@ -72,7 +31,7 @@ main .musica {
     justify-content: center;
     font-size: 24px;
     cursor: pointer;
-    border: 1px solid black;
+    border: 1px solid var(--color-gray-300);
     border-radius: 50%;
 }
 
@@ -83,7 +42,6 @@ main .musica {
     border-radius: 16px;
     overflow: hidden;
 }
-
 .cartaJuego img {
     width: 100%;
     height: auto;
@@ -95,22 +53,14 @@ main .musica {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     width: 64px;
     height: 64px;
     border-radius: 50%;
-
-    background-color: rgba(255, 51, 0, 0.9);
+    background-color: var(--color-play);
     display: flex;
     align-items: center;
     justify-content: center;
-
     cursor: pointer;
-}
-
-.overlay-play i {
-    color: white;
-    font-size: 24px;
 }
 
 .cartaJuegoMemoria {
@@ -120,6 +70,11 @@ main .musica {
 .cartaJuegoSopaLetras {
     margin-top: 2rem;
     margin-bottom: 6rem;
+}
+
+.overlay-play i {
+    color: var(--color-white);
+    font-size: 24px;
 }
 
 .contenidoCarta {
@@ -135,7 +90,7 @@ main .musica {
     font-weight: bold;
     margin-top: 0.5rem;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid var(--color-gray-300);
     width: fit-content;
     padding: 4px 32px;
 }
@@ -146,7 +101,7 @@ main .musica {
     text-align: left;
     padding: 8px;
     width: 280px;
-    border: 1px solid black;
+    border: 1px solid var(--color-gray-300);
 }
 
 .descripcionJuego figure {
@@ -155,7 +110,7 @@ main .musica {
 }
 
 .descripcionJuego p {
-    border-top: 1px solid black;
+    border-top: 1px solid var(--color-gray-300);
 }
 
 .descripcionJuego figure img {
@@ -164,65 +119,14 @@ main .musica {
     object-fit: contain;
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
-
-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around; 
-    align-items: center;
-    border-top: 1px solid black;
-    padding: 2rem 5%;
-    width: 100%;
-    box-sizing: border-box; 
-    background-color: #000000; 
-    flex-wrap: wrap; 
-}
-
-/* Estilos de la parte izquierda (Iconos) */
-.izquierda {
-    display: flex;
-    flex-direction: row;
-    gap: 20px; 
-    width: fit-content;
-    align-items: center;
-}
-
 .izquierda a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     text-align: center;
 }
-
-.izquierda figure {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .izquierda i {
     font-size: 1.5rem; 
     margin-bottom: 5px;
-}
-
-/* Estilos de la parte derecha (Datos de contacto) */
-.derecha {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: fit-content;
-    text-align: left; 
-    max-width: 100%;
-}
-
-.derecha div {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
 }
 
 .derecha i {
@@ -240,6 +144,7 @@ footer {
     line-height: 1.4;
     word-break: break-word;
 }
+
 /* =========================================
    TUTORIAL ONBOARDING (MODAL)
    ========================================= */
@@ -384,104 +289,6 @@ footer {
     cursor: not-allowed;
 }
 
-@media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: black;
-        flex-direction: column;
-        width: 100px;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        padding: 1rem;
-        pointer-events: none;
-        z-index: 9999;
-        opacity: 0;
-    }
-
-    .nav-links.active {
-        pointer-events: all;
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    .nav-links li {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.3s ease;
-    }
-
-    .nav-links.active li {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .nav-links li:nth-child(1) {
-        transition-delay: 0.1s;
-    }
-
-    .nav-links li:nth-child(2) {
-        transition-delay: 0.2s;
-    }
-
-    .nav-links li:nth-child(3) {
-        transition-delay: 0.3s;
-    }
-
-    /* FOOTER MÓVIL */
-    footer {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-        padding: 2rem 1rem;
-    }
-
-    .izquierda {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .derecha {
-        width: 100%;
-        align-items: center;
-        text-align: center;
-        margin: 0;
-    }
-
-    .derecha div {
-        justify-content: center;
-    }
-
-    /* TUTORIAL MÓVIL */
-    .tutorial-modal {
-        padding: 1.5rem;
-    }
-
-    .tutorial-title {
-        font-size: 1.5rem;
-    }
-
-    .tutorial-actions {
-        flex-direction: column-reverse;
-        gap: 15px;
-    }
-
-    .nav-buttons {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    #btn-skip {
-        width: 100%;
-        border: 1px solid #ddd;
-    }
-}
-
 /* PUNTAJES - SOPA DE LETRAS   */
 
 .puntajes-card {
@@ -510,13 +317,4 @@ footer {
 .tabla-puntajes th {
     font-weight: bold;
     background-color: #027000;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .tabla-puntajes th,
-    .tabla-puntajes td {
-        font-size: 0.85rem;
-        padding: 0.5rem;
-    }
 }
