@@ -13,10 +13,11 @@
     transition: all 0.2s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .nav-links a:focus, .nav-container .logo:hover {
     opacity: 0.8;
-    color: var(--color-primary);
+    color: var(--color-gray-300);
     transform: translate(-2px);
+    
 }
 
 main .musica {
@@ -50,13 +51,13 @@ main .musica {
 
 .overlay-play {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 64px;
     height: 64px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 50%;
-    background-color: var(--color-play);
+    background-color: var(--color-primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,6 +112,7 @@ main .musica {
 
 .descripcionJuego p {
     border-top: 1px solid var(--color-gray-300);
+
 }
 
 .descripcionJuego figure img {
@@ -145,6 +147,10 @@ main .musica {
     word-break: break-word;
 }
 
+.descripcionJuego p{
+    font-weight: bolder;
+    margin-block: 1lh;
+} 
 /* =========================================
    TUTORIAL ONBOARDING (MODAL)
    ========================================= */
@@ -332,4 +338,9 @@ main .musica {
     z-index: 1100;
     width: 90%;
     max-width: 400px;
+}
+
+.pre-partida a, form label, form button{
+    text-decoration: none;
+    color: var(--color-primary);
 }
