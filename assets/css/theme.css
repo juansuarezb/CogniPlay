@@ -1,0 +1,21 @@
+nav {
+    background-color: var(--color-primary);
+}
+
+main {
+    border-color: var(--color-white);
+}
+
+.menu-btn {
+    color: var(--color-white);
+}
+
+footer {
+    background-color: var(--color-primary);
+}
+
+@media(max-width: 768px) {
+    .nav-links.active {
+        background-color: var(--color-primary);
+    }
+}

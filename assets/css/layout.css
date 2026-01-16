@@ -3,9 +3,12 @@ body {
     grid-template-rows: auto 1fr auto;
     font-family: var(--font-base);
 }
-
+/*===================================================*/
+/* HEADER - Estilos para la cabecera principal del proyecto */
+/* Razon - Presentar los elementos en ambos extremos (en modo escritorio)*/
+/* Usar un manu hamburguesa para dispoisitivos moviles*/
+ 
 nav {
-    background-color: var(--color-primary);
     padding: 1rem 2rem;
 }
 
@@ -19,7 +22,7 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 0.9rem;
     list-style-type: none;
     transition: all 0.3s ease;
 }
@@ -27,7 +30,6 @@ nav {
 .menu-btn {
     background: none;
     border: none;
-    color: #ffff;
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
@@ -40,7 +42,7 @@ main {
     gap: 24px;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-white);
+
 }
 
 footer {
@@ -52,7 +54,6 @@ footer {
     padding: 2rem 5%;
     width: 100%;
     box-sizing: border-box; 
-    background-color: var(--color-primary); 
     flex-wrap: wrap; 
 }
 
@@ -93,7 +94,7 @@ footer {
     .nav-links {
         position: absolute;
         top: 60px;
-        left: 0;
+        right: 0;
         flex-direction: column;
         width: 100px;
         transform: translateX(100%);
@@ -108,8 +109,6 @@ footer {
         pointer-events: all;
         transform: translateX(0);
         opacity: 1;
-        background-color: var(--color-black);
-
     }
 
     .nav-links li {
@@ -186,5 +185,14 @@ footer {
     .tabla-puntajes td {
         font-size: 0.85rem;
         padding: 0.5rem;
+    }
+}
+
+@media(width>=1024px){
+    main{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 }
