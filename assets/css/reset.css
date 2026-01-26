@@ -62,6 +62,11 @@ button {
     border: none;
 }
 
+.logo {
+    height: 40px;
+    aspect-ratio: 1/1;
+}
+
 /* Listas sin estilos */
 ul,
 ol {
