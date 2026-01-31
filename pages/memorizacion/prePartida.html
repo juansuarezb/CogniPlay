@@ -68,17 +68,32 @@
         </figure>
 
         <!-- Formulario -->
-        <form class="form-jugador" action="juego.html" method="get">
+        <form
+            class="form-jugador"
+            action="juego.html"
+            method="get"
+            novalidate>
 
             <div class="campo-formulario">
-                <label for="nombreJugador">Nombre</label>
+                <label for="nombreJugador">Nombre del jugador</label>
+
                 <input
                     type="text"
                     id="nombreJugador"
                     name="nombreJugador"
-                    placeholder="Ingrese su nombre"
                     maxlength="20"
-                    required>
+                    required
+                    aria-describedby="ayuda-nombre error-nombre">
+
+                <!-- Texto de ayuda -->
+                <p id="ayuda-nombre" class="ayuda-campo">
+                    Ingresa un nombre de hasta 20 caracteres.
+                </p>
+
+                <!-- Mensaje de error (estructura) -->
+                <p id="error-nombre" class="error-campo" role="alert" hidden>
+                    El nombre es obligatorio.
+                </p>
             </div>
 
             <div class="acciones-formulario">
