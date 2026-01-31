@@ -3,3 +3,19 @@
 @import "./layout.css";
 @import "./components.css";
 @import "./utilities.css";
+
+
+:focus-visible {
+  outline: 5px solid #55ff00;
+  outline-offset: 5px;
+}   
+
+/* Asegurar foco visible en botones personalizados */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 5px solid #55ff00;
+  outline-offset: 5px;
+}  

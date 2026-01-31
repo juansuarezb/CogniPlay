@@ -2,104 +2,102 @@
 <html lang="es">
 
 <head>
-    <!-- ================================================= -->
-    <!-- HEAD BASE - COGNIPLAY -->
-    <!-- SEO + ACCESIBILIDAD + SOCIAL -->
-    <!-- ================================================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Memorización | Configuración de partida - CogniPlay</title>
 
-    <!-- ============================= -->
-    <!-- SEO -->
-    <!-- ============================= -->
     <meta name="description"
-        content="Configura la partida del juego de memorización en CogniPlay antes de comenzar.">
+        content="Configura la partida del juego de memorización antes de comenzar a jugar en CogniPlay.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Anderson Cango, Dylan Granizo, Juan Suárez, Álvaro Zumbana">
 
-    <!-- ============================= -->
-    <!-- ACCESIBILIDAD -->
-    <!-- ============================= -->
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#4A90E2">
 
-    <!-- ============================= -->
-    <!-- OPEN GRAPH -->
-    <!-- ============================= -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Memorización | CogniPlay">
-    <meta property="og:description"
-        content="Configura la partida del juego de memorización en CogniPlay.">
-    <meta property="og:image" content="../../assets/img/og-cogniplay.jpg">
-
-    <!-- ============================= -->
-    <!-- TWITTER -->
-    <!-- ============================= -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Memorización | CogniPlay">
-    <meta name="twitter:description"
-        content="Configura la partida del juego de memorización en CogniPlay.">
-    <meta name="twitter:image" content="../../assets/img/og-cogniplay.jpg">
-
-    <!-- ============================= -->
-    <!-- ESTILOS -->
-    <!-- ============================= -->
-    <link rel="stylesheet" href="../../assets/css/reset.css">
     <link rel="stylesheet" href="../../assets/css/styles.css">
 
-    <!-- ============================= -->
-    <!-- ICONOS -->
-    <!-- ============================= -->
     <script src="https://kit.fontawesome.com/e027a9bad0.js" crossorigin="anonymous"></script>
-
-    <!-- ============================= -->
-    <!-- JAVASCRIPT -->
-    <!-- ============================= -->
     <script src="../../js/script.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <nav aria-label="Navegación principal">
-            <div class="nav-container">
-                <a href="../../index.html" class="logo">CogniPlay</a>
+<header>
+    <nav aria-label="Navegación principal">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">CogniPlay</a>
 
-                <button class="menu-btn" id="menu-btn" aria-label="Abrir menú de navegación">
-                    &#9776;
+            <button
+                class="menu-btn"
+                id="menu-btn"
+                aria-label="Abrir menú de navegación"
+                aria-expanded="false"
+                aria-controls="nav-links">
+                &#9776;
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../../index.html">Juegos</a></li>
+                <li><a href="../sopaLetrasConfiguracionPartida.html">Acerca de</a></li>
+                <li><a href="../juegoMemoriaConfiguracion.html">Soporte</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main id="main-content" class="pre-partida">
+    <h1>Configuración del juego de Memorización</h1>
+
+    <!-- Ranking -->
+    <section class="ranking-link">
+        <a href="verPuntajes.html">Ver puntajes</a>
+    </section>
+
+    <!-- Card principal -->
+    <section class="pre-partida-card" aria-labelledby="titulo-configuracion">
+        <h2 id="titulo-configuracion">Antes de comenzar</h2>
+
+        <!-- Imagen -->
+        <figure class="imagen-juego">
+            <div
+                class="placeholder-imagen"
+                role="img"
+                aria-label="Ilustración del juego de memorización">
+            </div>
+        </figure>
+
+        <!-- Formulario -->
+        <form class="form-jugador" action="juego.html" method="get">
+
+            <div class="campo-formulario">
+                <label for="nombreJugador">Nombre</label>
+                <input
+                    type="text"
+                    id="nombreJugador"
+                    name="nombreJugador"
+                    placeholder="Ingrese su nombre"
+                    maxlength="20"
+                    required>
+            </div>
+
+            <div class="acciones-formulario">
+                <button type="submit" class="btn-siguiente">
+                    Configurar la partida
                 </button>
 
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="../../index.html">Juegos</a></li>
-                    <li><a href="../sopaLetrasConfiguracionPartida.html">Acerca de</a></li>
-                    <li><a href="../juegoMemoriaConfiguracion.html">Soporte</a></li>
-                </ul>
+                <a href="../../index.html" class="btn-cancelar">
+                    Cancelar
+                </a>
             </div>
-        </nav>
-    </header>
 
-    <main id="main-content">
-        <h1>Configuración del juego de Memorización</h1>
+        </form>
+    </section>
+</main>
 
-        <section aria-labelledby="descripcion-juego">
-            <h2 id="descripcion-juego">Antes de comenzar</h2>
-            <p>
-                En esta sección podrás configurar los parámetros básicos de la partida
-                antes de iniciar el juego de memorización.
-            </p>
-        </section>
-
-        <!-- Aquí irá la configuración de la partida en futuros issues -->
-    </main>
-
-    <footer>
-        <p>
-            © CogniPlay — Juegos educativos accesibles
-        </p>
-    </footer>
+<footer>
+    <p>© CogniPlay — Juegos educativos accesibles</p>
+</footer>
 
 </body>
-
 </html>
