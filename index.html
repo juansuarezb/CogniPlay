@@ -1,203 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- ============================= -->
-    <!-- METADATOS BÁSICOS -->
-    <!-- ============================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CogniPlay | Juegos educativos accesibles</title>
 
-    <!-- ============================= -->
-    <!-- SEO -->
-    <!-- ============================= -->
     <meta name="description"
         content="Plataforma de juegos educativos diseñada para reforzar la atención y la memoria en personas con TDAH mediante experiencias interactivas y accesibles.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Anderson Cango, Dylan Granizo, Juan Suárez, Álvaro Zumbana">
     <meta name="keywords"
-        content="TDAH, juegos educativos, atención, memoria, accesibilidad, usabilidad, refuerzo cognitivo">
+        content="TDAH, juegos educativos, atención, memoria, accesibilidad, usabilidad">
 
-    <!-- ============================= -->
-    <!-- OPEN GRAPH -->
-    <!-- ============================= -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="CogniPlay – Juegos educativos accesibles">
-    <meta property="og:description"
-        content="Plataforma de juegos educativos diseñada para reforzar la atención y la memoria en personas con TDAH.">
-    <meta property="og:image" content="/assets/img/og-cogniplay.jpg">
-
-    <!-- ============================= -->
-    <!-- TWITTER CARD -->
-    <!-- ============================= -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CogniPlay – Juegos educativos accesibles">
-    <meta name="twitter:description"
-        content="Plataforma de juegos educativos diseñada para reforzar la atención y la memoria en personas con TDAH.">
-    <meta name="twitter:image" content="/assets/img/og-cogniplay.jpg">
-
-    <!-- ============================= -->
-    <!-- ESTILOS -->
-    <!-- ============================= -->
     <link rel="stylesheet" href="assets/css/styles.css">
-
-    <!-- ============================= -->
-    <!-- ICONOS -->
-    <!-- ============================= -->
     <script src="https://kit.fontawesome.com/e027a9bad0.js" crossorigin="anonymous"></script>
-
-    <!-- ============================= -->
-    <!-- JAVASCRIPT -->
-    <!-- ============================= -->
     <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <nav aria-label="Navegación principal">
-            <div class="nav-container">
-                <a href="index.html" class="logo">CogniPlay</a>
+<header>
+    <nav aria-label="Navegación principal">
+        <div class="nav-container">
+            <a href="index.html" class="logo">CogniPlay</a>
 
-                <button class="menu-btn" id="menu-btn" aria-label="Abrir menú de navegación">
-                    &#9776;
-                </button>
+            <button
+                class="menu-btn"
+                id="menu-btn"
+                aria-label="Abrir menú de navegación"
+                aria-expanded="false"
+                aria-controls="nav-links">
+                &#9776;
+            </button>
 
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html">Juegos</a></li>
-                    <li><a href="pages/sopaLetrasConfiguracionPartida.html">Acerca de</a></li>
-                    <li><a href="pages/juegoMemoriaConfiguracion.html">Soporte</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main id="main-content">
-        <h1>Juegos educativos de CogniPlay</h1>
-
-        <!-- Juego de Memoria -->
-        <section class="cartaJuegoMemoria" aria-labelledby="titulo-memoria">
-            <div class="contenidoCarta">
-                <h2 id="titulo-memoria">Memorización</h2>
-
-                <div class="descripcionJuego">
-                    <figure>
-                        <img src="assets/juegoMemoria.webp"
-                             alt="Vista previa del juego de memorización con cartas"
-                             class="imagenJuego-movil">
-
-                        <figcaption class="overlay-play">
-                            <a href="./pages/memorizacion/prePartida.html" aria-label="Jugar Memorización">
-                                <i class="fa-solid fa-play" aria-hidden="true"></i>
-                            </a>
-                        </figcaption>
-                    </figure>
-
-                    <p>
-                        Pon a prueba y fortalece tu memoria visual a través de un juego dinámico de emparejamiento.
-                        Observa con atención, recuerda la ubicación de cada carta y encuentra los pares.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Juego Sopa de Letras -->
-        <section class="cartaJuegoSopaLetras" aria-labelledby="titulo-sopa">
-            <div class="contenidoCarta">
-                <h2 id="titulo-sopa">Sopa de Letras</h2>
-
-                <div class="descripcionJuego">
-                    <figure>
-                        <img src="assets/juegoSopaLetras.webp"
-                             alt="Vista previa del juego de sopa de letras"
-                             class="imagenJuego-movil">
-
-                        <figcaption class="overlay-play">
-                            <a href="./pages/sopaLetras/prePartida.html" aria-label="Jugar Sopa de Letras">
-                                <i class="fa-solid fa-play" aria-hidden="true"></i>
-                            </a>
-                        </figcaption>
-                    </figure>
-
-                    <p>
-                        Desarrolla tu atención y capacidad de búsqueda identificando palabras ocultas dentro de una
-                        cuadrícula en diferentes direcciones.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Configuración de música -->
-        <button class="musica" commandfor="music-dialog" command="show-modal" aria-label="Configuración de música">
-            <i class="fa-solid fa-music" aria-hidden="true"></i>
-        </button>
-
-        <dialog id="music-dialog" class="music-dialog" aria-labelledby="titulo-musica">
-            <form method="dialog">
-                <h2 id="titulo-musica">Configuración de Música de Fondo</h2>
-
-                <div class="music-options">
-                    <label>
-                        <input type="radio" name="music" value="on" checked>
-                        Activar música
-                    </label>
-
-                    <label>
-                        <input type="radio" name="music" value="off">
-                        Desactivar música
-                    </label>
-                </div>
-
-                <div class="dialog-actions">
-                    <button type="submit">Cerrar</button>
-                </div>
-            </form>
-        </dialog>
-    </main>
-
-    <footer>
-        <div class="izquierda">
-            <figure>
-                <i class="fa-brands fa-github" aria-hidden="true"></i>
-                <figcaption>
-                    <a href="https://github.com/juansuarezb/CogniPlay" target="_blank" rel="noopener">
-                        GitHub
-                    </a>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <i class="fa-brands fa-youtube" aria-hidden="true" style="color:#ff0000;"></i>
-                <figcaption>
-                    <a href="https://www.youtube.com/@cogniplay" target="_blank" rel="noopener">
-                        YouTube
-                    </a>
-                </figcaption>
-            </figure>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Juegos</a></li>
+                <li><a href="pages/sopaLetrasConfiguracionPartida.html">Acerca de</a></li>
+                <li><a href="pages/juegoMemoriaConfiguracion.html">Soporte</a></li>
+            </ul>
         </div>
+    </nav>
+</header>
 
-        <div class="derecha">
-            <p>
-                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                <a href="mailto:contacto@cogniplay.com">contacto@cogniplay.com</a>
-            </p>
+<main id="main-content">
+    <h1>Juegos educativos de CogniPlay</h1>
 
-            <p>
-                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                Quito, Ecuador – Escuela Politécnica Nacional
-            </p>
+    <!-- Juego Memorización -->
+    <section class="cartaJuegoMemoria" aria-labelledby="titulo-memoria">
+        <h2 id="titulo-memoria">Memorización</h2>
 
-            <p>
-                <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                <a href="tel:+593999999999">+593 999 999 999</a>
-            </p>
-        </div>
-    </footer>
+        <figure>
+            <img src="assets/juegoMemoria.webp"
+                 alt="Vista previa del juego de memorización con cartas"
+                 class="imagenJuego-movil">
 
-    <audio id="background-music" loop>
-        <source src="assets/audio/01.mp3" type="audio/mpeg">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
+            <figcaption class="overlay-play">
+                <a href="pages/memorizacion/prePartida.html"
+                   class="btn-play"
+                   aria-label="Jugar Memorización">
+                    <i class="fa-solid fa-play" aria-hidden="true"></i>
+                </a>
+            </figcaption>
+        </figure>
+
+        <p>
+            Pon a prueba y fortalece tu memoria visual encontrando pares de cartas iguales.
+        </p>
+    </section>
+
+    <!-- Juego Sopa de Letras -->
+    <section class="cartaJuegoSopaLetras" aria-labelledby="titulo-sopa">
+        <h2 id="titulo-sopa">Sopa de Letras</h2>
+
+        <figure>
+            <img src="assets/juegoSopaLetras.webp"
+                 alt="Vista previa del juego de sopa de letras"
+                 class="imagenJuego-movil">
+
+            <figcaption class="overlay-play">
+                <a href="pages/sopaLetras/prePartida.html"
+                   class="btn-play"
+                   aria-label="Jugar Sopa de Letras">
+                    <i class="fa-solid fa-play" aria-hidden="true"></i>
+                </a>
+            </figcaption>
+        </figure>
+
+        <p>
+            Encuentra palabras ocultas en una cuadrícula y desarrolla tu concentración.
+        </p>
+    </section>
+
+    <!-- Música -->
+    <button
+        class="musica"
+        aria-haspopup="dialog"
+        aria-controls="music-dialog"
+        aria-label="Configuración de música"
+        commandfor="music-dialog"
+        command="show-modal">
+        <i class="fa-solid fa-music" aria-hidden="true"></i>
+    </button>
+
+    <dialog id="music-dialog" class="music-dialog" aria-labelledby="titulo-musica">
+        <form method="dialog">
+            <h2 id="titulo-musica">Configuración de Música</h2>
+
+            <fieldset>
+                <legend>Estado de la música</legend>
+
+                <label>
+                    <input type="radio" name="music" value="on" checked>
+                    Activar música
+                </label>
+
+                <label>
+                    <input type="radio" name="music" value="off">
+                    Desactivar música
+                </label>
+            </fieldset>
+
+            <button type="submit">Cerrar</button>
+        </form>
+    </dialog>
+</main>
+
+<footer>
+    <p>© CogniPlay — Juegos educativos accesibles</p>
+</footer>
+
+<audio id="background-music" loop>
+    <source src="assets/audio/01.mp3" type="audio/mpeg">
+</audio>
 
 </body>
 </html>
