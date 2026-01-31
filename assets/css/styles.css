@@ -19,3 +19,8 @@ textarea:focus-visible {
   outline: 5px solid #55ff00;
   outline-offset: 5px;
 }  
+
+/* Evitar doble foco SOLO cuando focus-visible aplica */
+:focus:not(:focus-visible) {
+  outline: none;
+}
