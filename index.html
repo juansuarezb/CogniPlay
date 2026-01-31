@@ -6,43 +6,46 @@
     <!-- ============================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CogniPlay</title>
+    <title>CogniPlay | Juegos educativos accesibles</title>
+
     <!-- ============================= -->
     <!-- SEO -->
     <!-- ============================= -->
     <meta name="description"
         content="Plataforma de juegos educativos diseñada para reforzar la atención y la memoria en personas con TDAH mediante experiencias interactivas y accesibles.">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="Anderson Cango, Dylan Granizo, Juan Su&uacute;rez, &Aacute;lvaro Zumbana">
-    <meta name="description"
-        content="Plataforma de juegos educativos diseñada para reforzar la atención y la memoria en personas con TDAH.">
+    <meta name="author" content="Anderson Cango, Dylan Granizo, Juan Suárez, Álvaro Zumbana">
     <meta name="keywords"
-        content="TDAH, juegos educativos, atención, memoria, plataforma interactiva, refuerzo cognitivo, accessibilidad, usabilidad">
+        content="TDAH, juegos educativos, atención, memoria, accesibilidad, usabilidad, refuerzo cognitivo">
+
     <!-- ============================= -->
     <!-- OPEN GRAPH -->
     <!-- ============================= -->
-    <!--Define el título que se muestra cuando alguien 
-    comparte el sitio como enlace-->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="CogniPlay – Juegos educativos para mejorar la concentración">
+    <meta property="og:title" content="CogniPlay – Juegos educativos accesibles">
     <meta property="og:description"
         content="Plataforma de juegos educativos diseñada para reforzar la atención y la memoria en personas con TDAH.">
     <meta property="og:image" content="/assets/img/og-cogniplay.jpg">
+
+    <!-- ============================= -->
     <!-- TWITTER CARD -->
     <!-- ============================= -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CogniPlay – Juegos educativos para mejorar la concentración">
+    <meta name="twitter:title" content="CogniPlay – Juegos educativos accesibles">
     <meta name="twitter:description"
         content="Plataforma de juegos educativos diseñada para reforzar la atención y la memoria en personas con TDAH.">
     <meta name="twitter:image" content="/assets/img/og-cogniplay.jpg">
+
     <!-- ============================= -->
     <!-- ESTILOS -->
     <!-- ============================= -->
     <link rel="stylesheet" href="assets/css/styles.css">
+
     <!-- ============================= -->
     <!-- ICONOS -->
     <!-- ============================= -->
     <script src="https://kit.fontawesome.com/e027a9bad0.js" crossorigin="anonymous"></script>
+
     <!-- ============================= -->
     <!-- JAVASCRIPT -->
     <!-- ============================= -->
@@ -50,158 +53,151 @@
 </head>
 
 <body>
-    <!--Header es una etiqueta semántica
-    y define la cabecera principal de la página.
-    Además, mejora el SEO y organiza mejor el
-    contenido para los motores de búsqueda-->
+
     <header>
-        <!--La etiqueta nav representa
-        la barra de navegación del sitio web-->
-        <nav>
-            <!--La clase nav-container me ayuda
-            a ordenar y posicionar los elementos
-            del menu-->
+        <nav aria-label="Navegación principal">
             <div class="nav-container">
-                <!--Logo del sitio web-->
                 <a href="index.html" class="logo">CogniPlay</a>
-                <!--Botón de menú hamburguesa -->
-                <button class="menu-btn" id="menu-btn">&#9776;</button>
-                <!--Lista de navegación -->
+
+                <button class="menu-btn" id="menu-btn" aria-label="Abrir menú de navegación">
+                    &#9776;
+                </button>
+
                 <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Juegos</a></li>
                     <li><a href="pages/sopaLetrasConfiguracionPartida.html">Acerca de</a></li>
-                    <li><a href="pages/juegoMemoriaConfiguracion.html">Support</a></li>
+                    <li><a href="pages/juegoMemoriaConfiguracion.html">Soporte</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main>
-        <div class="cartaJuegoMemoria">
+
+    <main id="main-content">
+        <h1>Juegos educativos de CogniPlay</h1>
+
+        <!-- Juego de Memoria -->
+        <section class="cartaJuegoMemoria" aria-labelledby="titulo-memoria">
             <div class="contenidoCarta">
-                <div class="tituloJuego">
-                    <h2>Memorizaci&oacute;n</h2>
-                </div>
+                <h2 id="titulo-memoria">Memorización</h2>
+
                 <div class="descripcionJuego">
                     <figure>
-                        <img src="assets/juegoMemoria.webp" alt="Imagen del juego 2" class="imagenJuego-movil">
-                        <div class="overlay-play">
-                            <a href="./pages/memorizacion/prePartida.html">
-                                <i class="fa-solid fa-play"></i>
+                        <img src="assets/juegoMemoria.webp"
+                             alt="Vista previa del juego de memorización con cartas"
+                             class="imagenJuego-movil">
+
+                        <figcaption class="overlay-play">
+                            <a href="./pages/memorizacion/prePartida.html" aria-label="Jugar Memorización">
+                                <i class="fa-solid fa-play" aria-hidden="true"></i>
                             </a>
-                        </div>
+                        </figcaption>
                     </figure>
+
                     <p>
                         Pon a prueba y fortalece tu memoria visual a través de un juego dinámico de emparejamiento.
-                        Observa con atención, recuerda la ubicación de cada carta y encuentra los pares. Este juego estimula la concentración, la retención de información y la
-                        agilidad mental de forma entretenida y accesible.
+                        Observa con atención, recuerda la ubicación de cada carta y encuentra los pares.
                     </p>
                 </div>
             </div>
-        </div>
-        <div class="cartaJuegoSopaLetras">
+        </section>
+
+        <!-- Juego Sopa de Letras -->
+        <section class="cartaJuegoSopaLetras" aria-labelledby="titulo-sopa">
             <div class="contenidoCarta">
-                <div class="tituloJuego">
-                    <h2>Sopa de Letras</h2>
-                </div>
+                <h2 id="titulo-sopa">Sopa de Letras</h2>
+
                 <div class="descripcionJuego">
                     <figure>
-                        <img src="assets/juegoSopaLetras.webp" alt="Imagen del juego 1" class="imagenJuego-movil">
-                        <div class="overlay-play">
-                            <a href="./pages/sopaLetras/prePartida.html">
-                                <i class="fa-solid fa-play"></i>
+                        <img src="assets/juegoSopaLetras.webp"
+                             alt="Vista previa del juego de sopa de letras"
+                             class="imagenJuego-movil">
+
+                        <figcaption class="overlay-play">
+                            <a href="./pages/sopaLetras/prePartida.html" aria-label="Jugar Sopa de Letras">
+                                <i class="fa-solid fa-play" aria-hidden="true"></i>
                             </a>
-                        </div>
+                        </figcaption>
                     </figure>
+
                     <p>
                         Desarrolla tu atención y capacidad de búsqueda identificando palabras ocultas dentro de una
-                        cuadrícula. Las palabras pueden aparecer en diferentes direcciones, por lo que deberás
-                        mantener la concentración y analizar cuidadosamente cada letra.
+                        cuadrícula en diferentes direcciones.
                     </p>
                 </div>
             </div>
-        </div>
-        <button class="musica" commandfor="music-dialog" command="show-modal">
-            <i class="fa-solid fa-music"></i>
+        </section>
+
+        <!-- Configuración de música -->
+        <button class="musica" commandfor="music-dialog" command="show-modal" aria-label="Configuración de música">
+            <i class="fa-solid fa-music" aria-hidden="true"></i>
         </button>
-        <dialog id="music-dialog" class="music-dialog">
+
+        <dialog id="music-dialog" class="music-dialog" aria-labelledby="titulo-musica">
             <form method="dialog">
-                <h3>Configuración de Música de Fondo</h3>
+                <h2 id="titulo-musica">Configuración de Música de Fondo</h2>
+
                 <div class="music-options">
                     <label>
                         <input type="radio" name="music" value="on" checked>
-                        Activar Música
+                        Activar música
                     </label>
+
                     <label>
                         <input type="radio" name="music" value="off">
-                        Desactivar Música
+                        Desactivar música
                     </label>
                 </div>
+
                 <div class="dialog-actions">
                     <button type="submit">Cerrar</button>
                 </div>
             </form>
         </dialog>
     </main>
+
     <footer>
         <div class="izquierda">
-            <a href="https://github.com/juansuarezb/CogniPlay">
-                <figure>
-                    <i class="fa-brands fa-github"></i>
-                    <figcaption>
-                        <a href="https://github.com/juansuarezb/CogniPlay" target="_blank">GitHub</a>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="youtube.com">
-                <figure>
-                    <i class="fa-brands fa-youtube" style="color: #ff0000;"></i>
-                    <figcaption>
-                        <a href="https://www.youtube.com/@cogniplay" target="_blank">YouTube</a>
-                    </figcaption>
-                </figure>
-            </a>
+            <figure>
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                <figcaption>
+                    <a href="https://github.com/juansuarezb/CogniPlay" target="_blank" rel="noopener">
+                        GitHub
+                    </a>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <i class="fa-brands fa-youtube" aria-hidden="true" style="color:#ff0000;"></i>
+                <figcaption>
+                    <a href="https://www.youtube.com/@cogniplay" target="_blank" rel="noopener">
+                        YouTube
+                    </a>
+                </figcaption>
+            </figure>
         </div>
+
         <div class="derecha">
-            <div class="email">
-                <i class="fa-solid fa-envelope"></i>
+            <p>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                 <a href="mailto:contacto@cogniplay.com">contacto@cogniplay.com</a>
-            </div>
-            <div class="ubicacion">
-                <i class="fa-solid fa-location"></i>
-                <span>Quito, Ecuador -
-                    Escuela Polit&eacute;cnica Nacional</span>
-            </div>
-            <div class="telefono">
-                <i class="fa-solid fa-phone"></i>
-                <a href="tel:+593999999999999">+593 99999999999</a>
-            </div>
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                Quito, Ecuador – Escuela Politécnica Nacional
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <a href="tel:+593999999999">+593 999 999 999</a>
+            </p>
         </div>
     </footer>
-    <div id="tutorial-overlay" class="tutorial-overlay hidden">
-        <div class="tutorial-modal" role="dialog" aria-modal="true" aria-labelledby="tutorial-title">
-            <button class="tutorial-close" id="btn-close-tutorial" aria-label="Cerrar tutorial">&times;</button>
 
-            <div class="tutorial-content">
-                <h2 id="tutorial-title" class="tutorial-title">Título del Paso</h2>
-                <p id="tutorial-desc" class="tutorial-desc">Descripción del paso...</p>
-
-                <div class="step-indicators" id="step-indicators">
-                </div>
-            </div>
-
-            <div class="tutorial-actions">
-                <button id="btn-skip" class="btn-secondary">Saltar</button>
-                <div class="nav-buttons">
-                    <button id="btn-prev" class="btn-secondary" disabled>Anterior</button>
-                    <button id="btn-next" class="btn-primary">Siguiente</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <audio id="background-music" loop>
         <source src="assets/audio/01.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+        Tu navegador no soporta el elemento de audio.
     </audio>
-</body>
 
+</body>
 </html>
