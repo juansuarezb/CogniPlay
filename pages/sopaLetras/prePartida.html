@@ -23,72 +23,58 @@
 
 <body>
 
-<header>
-    <nav aria-label="Navegación principal">
-        <div class="nav-container">
-            <a href="../../index.html" class="logo">CogniPlay</a>
+    <header>
+        <nav aria-label="Navegación principal">
+            <div class="nav-container">
+                <a href="../../index.html" class="logo">
+                    <h1>CogniPlay</h1>
+                </a>
 
-            <button
-                class="menu-btn"
-                id="menu-btn"
-                aria-label="Abrir menú de navegación"
-                aria-expanded="false"
-                aria-controls="nav-links">
-                &#9776;
-            </button>
+                <button class="menu-btn" id="menu-btn" aria-label="Abrir menú de navegación" aria-expanded="false"
+                    aria-controls="nav-links">
+                    &#9776;
+                </button>
 
-            <ul class="nav-links" id="nav-links">
-                <li><a href="../../index.html">Juegos</a></li>
-                <li><a href="../sopaLetrasConfiguracionPartida.html">Acerca de</a></li>
-                <li><a href="../juegoMemoriaConfiguracion.html">Soporte</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
-
-<main id="main-content" class="pre-partida">
-    <h1>Configuración del juego Sopa de Letras</h1>
-
-    <!-- Ranking -->
-    <section class="ranking-link">
-        <a href="verPuntajes.html">Ver puntajes</a>
-    </section>
-
-    <!-- Card principal -->
-    <section class="pre-partida-card" aria-labelledby="titulo-configuracion">
-        <h2 id="titulo-configuracion">Antes de comenzar</h2>
-
-        <!-- Imagen / ilustración -->
-        <figure class="imagen-juego">
-            <div
-                class="placeholder-imagen"
-                role="img"
-                aria-label="Ilustración del juego Sopa de Letras">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="../../index.html">Juegos</a></li>
+                    <li><a href="../sopaLetrasConfiguracionPartida.html">Acerca de</a></li>
+                    <li><a href="../juegoMemoriaConfiguracion.html">Soporte</a></li>
+                </ul>
             </div>
-        </figure>
+        </nav>
+    </header>
 
-        <!-- Formulario -->
-        <form
-            id="formJugador"
-            class="form-jugador"
-            method="get"
-            action="../../pages/sopaLetras/sopaLetrasConfiguracionPartida.html"
-            novalidate>
+    <main id="main-content" class="pre-partida">
+        <h1>Configuración del juego Sopa de Letras</h1>
+
+        <!-- Ranking -->
+        <section class="ranking-link">
+            <a href="verPuntajes.html">Ver puntajes</a>
+        </section>
+
+        <!-- Card principal -->
+        <section class="pre-partida-card" aria-labelledby="titulo-configuracion">
+            <h2 id="titulo-configuracion">Antes de comenzar</h2>
+
+            <!-- Imagen / ilustración -->
+            <figure class="imagen-juego">
+                <div class="placeholder-imagen" role="img" aria-label="Ilustración del juego Sopa de Letras">
+                </div>
+            </figure>
+
+            <!-- Formulario -->
+            <form id="formJugador" class="form-jugador" method="get"
+                action="../../pages/sopaLetras/sopaLetrasConfiguracionPartida.html" novalidate>
 
 
-            <div class="campo-formulario">
-                <label for="nombreJugador">Nombre del jugador</label>
+                <div class="campo-formulario">
+                    <label for="nombreJugador">Nombre del jugador</label>
 
-                <input
-                    type="text"
-                    id="nombreJugador"
-                    name="nombreJugador"
-                    maxlength="20"
-                    required
-                    aria-describedby="ayuda-nombre error-nombre">
+                    <input type="text" id="nombreJugador" name="nombreJugador" maxlength="20" required
+                        aria-describedby="ayuda-nombre error-nombre">
 
                     <p id="ayuda-nombre" class="ayuda-campo">
-                         Ingresa un nombre de hasta 20 caracteres.
+                        Ingresa un nombre de hasta 20 caracteres.
                     </p>
 
                     <p id="error-nombre" class="error-campo" role="alert" hidden>
@@ -96,24 +82,25 @@
                     </p>
 
 
-            </div>
+                </div>
 
-            <div class="acciones-formulario">
-                <button type="submit" class="btn-siguiente">
-                    Configurar la partida
-                </button>
+                <div class="acciones-formulario">
+                    <button type="submit" class="btn-siguiente">
+                        Configurar la partida
+                    </button>
 
-                <a href="../../index.html" class="btn-cancelar">
-                    Cancelar
-                </a>
-            </div>
-        </form>
-    </section>
-</main>
+                    <a href="../../index.html" class="btn-cancelar">
+                        Cancelar
+                    </a>
+                </div>
+            </form>
+        </section>
+    </main>
 
-<footer>
-    <p>© CogniPlay — Juegos educativos accesibles</p>
-</footer>
+    <footer>
+        <p>© CogniPlay — Juegos educativos accesibles</p>
+    </footer>
 
 </body>
+
 </html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <title>Sopa de Letras</title>
+    <script src="../../js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Navegación principal">
+            <div class="nav-container">
+                <a href="../../index.html" class="logo">
+                    <h1>CogniPlay</h1>
+                </a>
+                <button class="menu-btn" id="menu-btn" aria-label="Abrir menú de navegación" aria-expanded="false"
+                    aria-controls="nav-links">
+                    &#9776;
+                </button>
+
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="../../index.html">Juegos</a></li>
+                    <li><a href="../sopaLetrasConfiguracionPartida.html">Acerca de</a></li>
+                    <li><a href="../juegoMemoriaConfiguracion.html">Soporte</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main-content" class="game-page">
+        <div class="countContainer">
+            <p class="initialText d_inline"></p>
+            <p class="txtCount d_none">
+                <span id="countWords"></span><span id="wordsSpan"></span>Izquierda
+            </p>
+        </div>
+        <div class="btnStartContainer">
+            <button class="btnStart" type="button">START GAME!</button>
+            <button class="btnRestart d_none" type="button">RESTART GAME</button>
+        </div>
+        <div class="imgsContainer">
+            <div class="imgContainer">
+                <img src="../../assets/images/aguila.jpg" alt="&Aacute;guila" class="imgWordNotFound">
+                <span class="spanWord">Aguila</span>
+            </div>
+            <div class="imgContainer">
+                <img src="../../assets/images/ardilla.webp" alt="Ardilla" class="imgWordNotFound">
+                <span class="spanWord">Ardilla</span>
+            </div>
+            <div class="imgContainer">
+                <img src="../../assets/images/cat.jpg" alt="Gato" class="imgWordNotFound">
+                <span class="spanWord">Gato</span>
+            </div>
+            <div class="imgContainer">
+                <img src="../../assets/images/dog.webp" alt="Perro" class="imgWordNotFound">
+                <span class="spanWord">Perro</span>
+            </div>
+            <div class="imgContainer">
+                <img src="../../assets/images/hipopotamo.jpg" alt="Hipop&oacute;tamo" class="imgWordNotFound">
+                <span class="spanWord">Hipop&oacute;tamo</span>
+            </div>
+            <div class="imgContainer">
+                <img src="../../assets/images/jaguar.jpg" alt="Jaguar" class="imgWordNotFound">
+                <span class="spanWord">Jaguar</span>
+            </div>
+            <div class="imgContainer">
+                <img src="../../assets/images/oso_panda.jpg" alt="Oso Panda" class="imgWordNotFound">
+                <span class="spanWord">Oso Panda</span>
+            </div>
+            <div class="imgContainer">
+                <img src="../../assets/images/oso_perezoso.avif" alt="Oso Perezoso" class="imgWordNotFound">
+                <span class="spanWord">Oso Perezoso</span>
+            </div>
+        </div>
+        <!--Vamos a tener 11 filas, cada fila tendrá 14 letras-->
+        <div class="wordSearch">
+            <button class="btnLetter" type="button"></button>
+        </div>
+    </main>
+</body>
+
+</html>
