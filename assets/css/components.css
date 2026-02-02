@@ -1,7 +1,19 @@
 /* components.css */
+/*Header*/
+nav {
+    background-color: var(--color-primary);
+    padding: 1rem 2rem;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .logo {
     color: var(--color-white);
     font-size: 1.5rem;
+    /*Reubicar*/
     font-weight: 700;
     text-decoration: none;
 }
@@ -13,11 +25,27 @@
     transition: all 0.2s;
 }
 
-.nav-links a:hover, .nav-links a:focus, .nav-container .logo:hover {
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-container .logo:hover {
     opacity: 0.8;
     color: var(--color-gray-300);
     transform: translate(-2px);
-    
+
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: #ffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/*Main*/
+main {
+    background-color: var(--color-white);
 }
 
 main .musica {
@@ -43,6 +71,7 @@ main .musica {
     border-radius: 16px;
     overflow: hidden;
 }
+
 .cartaJuego img {
     width: 100%;
     height: auto;
@@ -112,6 +141,8 @@ main .musica {
 
 .descripcionJuego p {
     border-top: 1px solid var(--color-gray-300);
+    font-weight: bolder;
+    margin-block: 1lh;
 
 }
 
@@ -126,20 +157,23 @@ main .musica {
     color: rgb(255, 255, 255);
     text-align: center;
 }
+
 .izquierda i {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     margin-bottom: 5px;
 }
 
 .derecha i {
     font-size: 1.2rem;
-    color: white; 
-    flex-shrink: 0; /* Evita que el icono se aplaste */
+    color: white;
+    flex-shrink: 0;
+    /* Evita que el icono se aplaste */
     width: 20px;
     text-align: center;
 }
 
-.derecha a, .derecha span {
+.derecha a,
+.derecha span {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 0.9rem;
@@ -147,10 +181,7 @@ main .musica {
     word-break: break-word;
 }
 
-.descripcionJuego p{
-    font-weight: bolder;
-    margin-block: 1lh;
-} 
+
 /* =========================================
    TUTORIAL ONBOARDING (MODAL)
    ========================================= */
@@ -160,8 +191,8 @@ main .musica {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); 
-    backdrop-filter: blur(5px); 
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,8 +221,15 @@ main .musica {
 }
 
 @keyframes slideUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .tutorial-title {
@@ -245,6 +283,7 @@ main .musica {
     background-color: black;
     transform: scale(1.2);
 }
+
 /* Botonera Tutorial */
 .tutorial-actions {
     display: flex;
@@ -260,7 +299,8 @@ main .musica {
     gap: 10px;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
     padding: 10px 20px;
     border-radius: 8px;
     font-size: 0.95rem;
@@ -325,7 +365,7 @@ main .musica {
     background-color: #027000;
 }
 
-.music-dialog{
+.music-dialog {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -340,7 +380,135 @@ main .musica {
     max-width: 400px;
 }
 
-.pre-partida a, form label, form button{
+.pre-partida a,
+form label,
+form button {
     text-decoration: none;
     color: var(--color-primary);
+}
+
+.game-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.game-page p {
+    margin-top: 0;
+}
+
+.initial-Text {
+    color: var(--secondaryColorSearchWord);
+    font-size: 20px;
+}
+
+.fewWords-Text {
+    color: var(--fewWordsColor);
+    text-shadow: -1px 0px 6px var(--fewWordsColor);
+}
+
+.goodNumber-Text {
+    color: var(--goodNumberColor);
+    text-shadow: -1px 0px 6px var(--goodNumberColor);
+}
+
+.lotOfWords-Text {
+    color: var(--startColorSearchWord);
+    text-shadow: -1px 0px 6px var(--startColorSearchWord);
+}
+
+.btnStart,
+.btnRestart {
+    background-color: var(--mainColorSearchWord);
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 5px 15px 5px 15px;
+    transition: all 0.3s;
+}
+
+.btnStart {
+    animation: startButtonShadowAnimation 3s ease-out infinite;
+    border: solid 2px var(--startColorSearchWord);
+    color: var(--startColorSearchWord)
+}
+
+.btnRestart {
+    animation: restartButtonShadowAnimation 3s ease-out infinite;
+    border: solid 2px var(--secondaryColorSearchWord);
+    color: var(--secondaryColorSearchWord);
+}
+
+.disableBtnStart {
+    color: var(--secondaryColorSearchWord);
+    border: solid 2px var(--secondaryColorSearchWord);
+}
+
+.disabledBtn,
+.disabledBtnStart {
+    animation: none;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.imgsContainer {
+    margin-top: 15px
+}
+
+.imgContainer {
+    margin: 0 10px;
+}
+.imgContainer img{
+    margin-bottom: 5px;
+    transition: all 0.3s;
+
+}
+.imgWordNotFound{
+    filter: grayscale(100%);
+}
+.spanWord{
+    color: var(--secundaryColorSearchWord)
+}
+@keyframes startButtonShadowAnimation {
+    0% {
+        box-shadow: 0 0 15px -3px var(--startColorSearchWord);
+    }
+
+    25% {
+        box-shadow: 0 0 15px 1px var(--startColorSearchWord);
+    }
+
+    50% {
+        box-shadow: 0 0 15px -3px var(--startColorSearchWord);
+    }
+
+    75% {
+        box-shadow: 0 0 15px 1px var(--startColorSearchWord);
+    }
+
+    100% {
+        box-shadow: 0 0 15px -3px var(--startColorSearchWord);
+    }
+}
+
+@keyframes restartButtonShadowAnimation {
+    0% {
+        box-shadow: 0 0 15px -3px var(--secondaryColorSearchWord);
+    }
+
+    25% {
+        box-shadow: 0 0 15px 1px var(--secondaryColorSearchWord);
+    }
+
+    50% {
+        box-shadow: 0 0 15px -3px var(--secondaryColorSearchWord);
+    }
+
+    75% {
+        box-shadow: 0 0 15px 1px var(--secondaryColorSearchWord);
+    }
+
+    100% {
+        box-shadow: 0 0 15px -3px var(--secondaryColorSearchWord);
+    }
 }

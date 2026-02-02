@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "Pixellari";
   src: url("../fonts/Pixellari.ttf") format("truetype");
@@ -6,6 +5,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 :root {
   /* Colores */
   --color-black: #000000;
@@ -16,6 +16,19 @@
   --color-primary: #b5a395;
   --color-success: #027000;
   --color-overlay: rgba(0, 0, 0, 0.6);
+  --mainColorSearchWord: #2B2B2B;
+  --secondaryColorSearchWord: #FFF;
+  --startColorSearchWord: #1CC700;
+  --fewWordsColor: #DE0000;
+  --goodNumberColor: #FFE200;
+  --aguilaColor: #5A3A1E;
+  --ardillaColor: #A0522D;
+  --catColor: #F4A460;
+  --dogColor: #8B5A2B;
+  --hipopotamoColor: #6D6E71;
+  --jaguarColor: #C19A3E;
+  --oso_pandaColor: #000000;
+  --oso_perezosoColor: #556B2F;
 
   /* Tipografía */
   --font-base: "Pixellari", system-ui, sans-serif;
@@ -36,4 +49,3 @@
   --z-modal: 1000;
   --z-nav: 9999;
 }
-
