@@ -1,26 +1,9 @@
-@import "reset.css";
+@import "./reset.css";
 @import "./variables.css";
+@import "./base.css";
+@import "./accessibility.css";
 @import "./layout.css";
 @import "./components.css";
 @import "./utilities.css";
 
 
-:focus-visible {
-  outline: 5px solid #55ff00;
-  outline-offset: 5px;
-}   
-
-/* Asegurar foco visible en botones personalizados */
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-  outline: 5px solid #55ff00;
-  outline-offset: 5px;
-}  
-
-/* Evitar doble foco SOLO cuando focus-visible aplica */
-:focus:not(:focus-visible) {
-  outline: none;
-}
