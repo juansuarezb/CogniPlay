@@ -37,10 +37,10 @@ nav {
 .menu-btn {
     background: none;
     border: none;
-    color: #ffff;
+    color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
-    display: none;
+    display: block; /* móvil */
 }
 
 /*Main*/
@@ -532,5 +532,202 @@ form button {
 
     100% {
         box-shadow: 0 0 15px -3px var(--secondaryColorSearchWord);
+    }
+}
+
+/* Completed word styles*/
+.txtImgAguila{
+    color: var(--aguilaColor);
+    text-shadow: -1px 0px 1px var(--aguilaColor);
+}
+.txtImgArdilla{
+    color: var(--ardillaColor);
+    text-shadow: -1px 0px 1px var(--ardillaColor);
+}
+.txtImgCat{
+    color: var(--catColor);
+    text-shadow: -1px 0px 1px var(--catColor);
+}
+.txtImgDog{
+    color: var(--dogColor);
+    text-shadow: -1px 0px 1px var(--dogColor);
+}
+.txtImgHipopotamo{
+    color: var(--hipopotamoColor);
+    text-shadow: -1px 0px 1px var(--hipopotamoColor);
+}
+.txtImgJaguar{
+    color: var(--jaguarColor);
+    text-shadow: -1px 0px 1px var(--jaguarColor);
+}
+.txtImgOso_panda{
+    color: var(--oso_pandaColor);
+    text-shadow: -1px 0px 1px var(--oso_pandaColor);
+}
+.txtImgOso_perezoso{
+    color: var(--oso_perezosoColor);
+    text-shadow: -1px 0px 1px var(--oso_perezosoColor);
+}
+.btnWordCompleteAguila, .btnWordCompleteArdilla, .btnWordCompleteCat, .btnWordCompleteDog,
+.btnWordCompleteHipopotamo, .btnWordCompleteJaguar, .btnWordCompleteOso_panda, .btnWordCompleteOso_perezoso{
+    color: var(--secondaryColorSearchWord);
+    font-weight: 700;
+    pointer-events: none;
+}
+.btnWordCompleteAguila{
+    background-color: var(--aguilaColor);
+    border: solid 2px var(--aguilaColor) !important;
+    box-shadow: 0px 0px 15px -3px var(--aguilaColor);
+}
+.btnWordCompleteArdilla{
+    background-color: var(--ardillaColor);
+    border: solid 2px var(--ardillaColor) !important;
+    box-shadow: 0px 0px 15px -3px var(--ardillaColor);
+}
+.btnWordCompleteCat{
+    background-color: var(--catColor);
+    border: solid 2px var(--catColor) !important;
+    box-shadow: 0px 0px 15px -3px var(--catColor);
+}
+.btnWordCompleteDog{
+    background-color: var(--dogColor);
+    border: solid 2px var(--dogColor) !important;
+    box-shadow: 0px 0px 15px -3px var(--dogColor);
+}
+.btnWordCompleteHipopotamo{
+    background-color: var(--hipopotamoColor);
+    border: solid 2px var(--hipopotamoColor) !important;
+    box-shadow: 0px 0px 15px -3px var(--hipopotamoColor);
+}
+.btnWordCompleteJaguar{
+    background-color: var(--jaguarColor);
+    border: solid 2px var(--jaguarColor) !important;
+    box-shadow: 0px 0px 15px -3px var(--jaguarColor);
+}
+.btnWordCompleteOso_panda{
+    background-color: var(--oso_pandaColor);
+    border: solid 2px var(--oso_pandaColor) !important;
+    box-shadow: 0px 0px 15px -3px var(--oso_pandaColor);
+}
+.btnWordCompleteOso_perezoso{
+    background-color: var(--oso_perezosoColor);
+    border: solid 2px var(--oso_perezosoColor) !important;
+    box-shadow: 0px 0px 15px -3px var(--oso_perezosoColor);
+}
+/* Media Queries */
+@media (min-width: 769px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .nav-links {
+        position: static;
+        flex-direction: row;
+        transform: none;
+        opacity: 1;
+        pointer-events: all;
+        background: transparent;
+    }
+}
+
+@media (max-width: 280px){
+
+    h1{
+        font-size: 20px;
+    }
+    .initialText, .txtCount{
+        font-size: 12px;
+    }
+    .btnStart, .btnRestart{
+        font-size: 12px;
+    }
+    .imgsContainer{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-row-gap: 5px;
+        justify-items: center;
+    }
+    .imgsContainer img{
+        width: 25px;
+        height: 25px;
+    }
+    .spanWord{
+        font-size: 10px;
+    }
+    .btnLetter{
+        border: solid 1px var(--secondaryColorSearchWord);
+        font-size: 8px;
+        margin: 0;
+        padding: 0;
+        width: 14px;
+        height: 20px;
+    }
+    
+}
+
+@media(min-width:350px){
+    .btnLetter{
+        font-size: 9px;
+        width: 19px
+    }
+}
+
+@media(min-width:400px){
+    .btnLetter{
+        font-size: 10px;
+        width: 20px
+    }
+}
+@media (min-width: 768px) {
+    h1{
+        font-size:32px ;
+    }
+    .initialText, .txtCount{
+        font-size: 20px;
+    }
+    .btnStart, .btnRestart{
+        font-size: 16px;
+    }
+    .imgsContainer{
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 1fr;
+        grid-row-gap:0px;
+    }
+    .imgContainer img{
+        width: 80px;
+        height: 80px;
+    }
+    .spanWord{
+        font-size: 13px;
+    }
+    .btnLetter{
+        border: solid 2px var(--secondaryColorSearchWord);
+        font-size: 15px;
+        margin: 0 2px 5px 2px;
+        width: 28px;
+        height: 28px;
+    }
+}
+@media (min-width: 992px){
+    .btnStart:hover{
+        background-color: var(--startColorSearchWord);
+        box-shadow: 0px 0px 15px -3px var(--startColorSearchWord);
+    }
+    .btnRestart:hover{
+        background-color: var(--secondaryColorSearchWord);
+        box-shadow: 0px 0px 15px -3px var(--secondaryColorSearchWord);
+    }
+    .btnStart:hover, .btnRestart:hover{
+        animation: none;
+        color: var(--secondaryColorSearchWord);
+    }
+    .btnLetter:hover{
+        background-color: var(--color-black);
+        box-shadow: 0px 0px 15px 1px var(--secondaryColorSearchWord);
+    }
+    .btnLetterClicked:hover{
+        animation: none;
+        color: var(--secondaryColorSearchWord);
     }
 }

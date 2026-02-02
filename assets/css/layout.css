@@ -92,9 +92,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-    }
+
     .nav-links {
         position: absolute;
         top: 60px;
