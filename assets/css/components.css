@@ -467,7 +467,29 @@ form button {
     filter: grayscale(100%);
 }
 .spanWord{
-    color: var(--secundaryColorSearchWord)
+    color: var(--secondaryColorSearchWord)
+}
+
+.wordSearch{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    transition: all 1.5s;
+}
+.wordsSearchDisabled{
+    pointer-events: none;
+}
+.btnLetter{
+    background-color: var(--mainColorSearchWord);
+    border-radius: 5px;
+    transition: all 0.2s;
+    padding: 2px 8px 2px 8px;
+    color: var(--secondaryColorSearchWord);
+}
+
+.btnLetterClicked{
+    background-color: var(--secondaryColorSearchWord);
+    color: var(--mainColorSearchWord);
+    font-weight: 600;
 }
 @keyframes startButtonShadowAnimation {
     0% {
